@@ -9,7 +9,7 @@
     "test-integration": "TEST_TYPE=integration npm test",
     "test-certification": "TEST_TYPE=certification npm test",
     "test-capture": "TEST_TYPE=capture npm test",
-    "test-with-coverage": "nyc npm test && nyc report --reporter=text-lcov | ./node_modules/coveralls/bin/coveralls.js"
+    "test-with-coverage": "nyc npm test && nyc report --reporter=text-lcov > ./lcov.info"
   },
   "repository": {
     "type": "git",
