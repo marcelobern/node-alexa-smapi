@@ -9,7 +9,9 @@
     "test-integration": "TEST_TYPE=integration npm test",
     "test-certification": "TEST_TYPE=certification npm test",
     "test-capture": "TEST_TYPE=capture npm test",
-    "test-with-coverage": "nyc npm test && nyc report --reporter=text-lcov > ./lcov.info"
+    "test-with-coverage": "nyc npm test && nyc report --reporter=text-lcov > ./lcov.info",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -30,7 +32,8 @@
   },
   "homepage": "https://github.com/tejashah88/node-alexa-smapi#readme",
   "dependencies": {
-    "axios": "^0.17.1"
+    "axios": "^0.17.1",
+    "snyk": "^1.161.1"
   },
   "devDependencies": {
     "ask-cli": "^1.4.2",
@@ -42,5 +45,6 @@
     "mocha": "^5.2.0",
     "mocha-lcov-reporter": "^1.3.0",
     "nyc": "^13.0.1"
-  }
+  },
+  "snyk": true
 }
